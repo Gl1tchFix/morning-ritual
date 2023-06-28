@@ -1,0 +1,126 @@
+body
+{
+    background-color: rgba(90, 80, 109, 0.295);
+}
+main
+{
+    width : 100vw;
+    max-width : 800px;
+    height : 100vh;
+    margin : auto;
+    position : relative;
+
+
+}
+
+main div
+{
+    position : relative;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    padding : 30px 5px 0px 5px;
+    height:auto;
+}
+
+ #stat
+{
+    width : 100%;
+}
+
+#stat label
+{
+    width : 50%;
+    padding : 5px;
+    text-align : center;
+    background-color : none;
+}
+#stat input
+{
+    width : 50%;
+    padding : 5px;
+    text-align : center;
+    background-color : rgba(0, 0, 0, 0);
+    font-weight: bold;
+}
+
+#time-box
+{
+    background-color : #dd3737;
+
+}
+
+#awake-box
+{
+    background-color : #f3c7a3;
+
+}
+
+#coffee-box
+{
+    background-color : #9c6f44;
+
+}
+
+#hygene-box
+{
+    background-color : #a3c6f3;
+
+}
+
+input
+{
+    border : none;
+}
+
+#story textarea 
+{
+    overflow-y : scroll;
+    width:100%;
+    height : 300px;
+    background-color: #ffffee;
+    resize : none;
+}
+
+#goals .goal
+{
+    text-align : center;
+    width : 100%;
+    padding: 5px;
+    background:none;
+}
+
+#rooms
+{
+    display: flex;
+    width:100%;
+}
+
+#rooms .room
+{
+    width:100%;
+    margin:5px;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    background-color:lightgoldenrodyellow;
+} 
+
+#tasks .task, .final
+{
+    width:100%;
+    margin:5px;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    background-color:rgb(253, 253, 178);
+}
+#finish .task
+{
+    width:100%;
+    margin:5px;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    background-color:rgb(253, 253, 178);
+}

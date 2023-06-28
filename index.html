@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/script/jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="src/script/main.js" language="javascript" type="text/javascript"></script>
+    <script src="src/script/roomHandler.js" language="javascript" type="text/javascript"></script>
+    <script src="src/script/taskHandler.js" language="javascript" type="text/javascript"></script>
+    <script src="src/script/eventHandler.js" language="javascript" type="text/javascript"></script>
+    <script src="src/script/storyHandler.js" language="javascript" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="src/css/bootstrap.css"></link>
+    <link type="text/css" rel="stylesheet" href="src/css/bootstrap.min.css"></link>
+    <link type="text/css" rel="stylesheet" href="src/css/main.css"></link>
+    <title>Morning Ritual</title>
+</head>
+<body>
+    <main>
+        <div id="stat">
+            <span class="stat" id="time-box"><label for="time">Idő: </label><input type="text" name="time" id="time" readonly></span>            
+            <span class="stat" id="awake-box"><label for="awake">Éberség: </label><input type="text" name="awake" id="awake" readonly></span>
+            <span class="stat" id="coffee-box"><label for="coffein">Koffein: </label><input type="text" name="coffein" id="coffein" readonly></span>        
+            <span class="stat" id="hygene-box"><label for="hygene">Higénia: </label><input type="text" name="hygene" id="hygene" readonly></span>
+        </div>
+
+        <div id="story">
+            <textarea name="story" id="storyboard" cols="100" rows="5000" readonly></textarea>
+        </div>
+    
+
+        <div id="goals">
+            <input type="text" class="goal" id="is-showered" value="Zuhanyoztál" readonly/>
+            <input type="text" class="goal" id="teeth-brushed" value="Fogat mostál" readonly/>
+            <input type="text" class="goal" id="is-dressed" value="Felöltöztél" readonly/>
+        </div>
+    
+        <div id="rooms">
+            <button onclick="room(this)" class="room" id="bedroom">Hálószoba</button>       
+            <button onclick="room(this)" class="room" id="living-room">Nappali</button>
+            <button onclick="room(this)" class="room" id="bathroom">Fürdőszoba</button>
+            <button onclick="room(this)" class="room" id="kitchen">Konyha</button>
+        </div>
+        
+        <div id="tasks">
+            <!--Main tasks-->
+            <button onclick="task(15,2,0,0,0,0,0)" class="task" id="snooze">Szundi</button>
+            <button onclick="task(5,2,1,-1,0,0,0)" class="task" id="coffee">Kávé</button>
+            <button onclick="task(5,2,2,0,0,0,0)" class="task" id="nrg">Energiaital</button>
+            <button onclick="task(15,1,0,2,1,0,0)" class="task" id="shower">Zuhany</button>
+            <button onclick="task(5,0,0,2,0,1,0)" class="task" id="brush-teeth">Fogmosás</button>
+            <button onclick="task(20,0,0,2,0,0,1)" class="task" id="dress-up">Öltözés</button>
+            <!--Event tasks-->
+            <button onclick="brewCoffee(1)" class="task" id="brew-coffee">Kávéfőzés</button>
+            <button onclick="brewCoffee(0)" class="task" id="no-coffee">Nem kér kávét</button>
+        </div>
+        
+        <div id="finish">
+            <button onclick="finished()" class="final" id="finished">Készen állok a napra!</button>
+        </div>
+    </main>
+</body>
+</html>
