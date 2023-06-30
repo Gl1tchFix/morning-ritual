@@ -2,6 +2,7 @@ body
 {
     background-color: rgba(90, 80, 109, 0.295);
 }
+
 main
 {
     width : 100vw;
@@ -9,8 +10,6 @@ main
     height : 100vh;
     margin : auto;
     position : relative;
-
-
 }
 
 main div
@@ -35,6 +34,7 @@ main div
     text-align : center;
     background-color : none;
 }
+
 #stat input
 {
     width : 50%;
@@ -71,6 +71,11 @@ main div
 input
 {
     border : none;
+}
+
+#story
+{
+    width:100%
 }
 
 #story textarea 
@@ -115,6 +120,7 @@ input
     border-radius:5px;
     background-color:rgb(253, 253, 178);
 }
+
 #finish .task
 {
     width:100%;

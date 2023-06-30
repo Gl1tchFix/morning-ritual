@@ -105,6 +105,7 @@ function task(tTime, tAwake, tCoffein, tHygene, isShower, teethIsBrushed, isDres
         hours++;
         minutes -= 60;
     }
+    minuteString = ("0" + minutes).slice(-2);
 
     process();
 

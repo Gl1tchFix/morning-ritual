@@ -1,30 +1,31 @@
 
-var time = 60;
-var awake = 0;
-var coffein = 0;
-var hygene = 0; 
+let time = 60;
+let awake = 0;
+let coffein = 0;
+let hygene = 0; 
 
-var roomList =["bedroom", "living-room", "bathroom", "kitchen"];
-var currentRoom = "bedroom";
+const ROOM_LIST =["bedroom", "living-room", "bathroom", "kitchen"];
+let currentRoom = "bedroom";
 
-var taskCounter = 0;
-var takeShower = 0;
-var brushTeeth = 0;
-var dressUp = 0;
+let taskCounter = 0;
+let takeShower = 0;
+let brushTeeth = 0;
+let dressUp = 0;
 
-var ooc = Math.floor(Math.random() * 2);
-var wantCoffee = 0;
-var isItSpilled = 0;
+let ooc = Math.floor(Math.random() * 2);
+let wantCoffee = 0;
+let isItSpilled = 0;
 
-var coffeeBreath = 0;
+let coffeeBreath = 0;
 
-var hours = 5;
-var minutes = 30;
+let hours = 5;
+let minutes = 30;
+let minuteString = "30";
 
-var text;
+let text;
 $( document ).ready(function() {
     
-    $("textarea#storyboard").val(hours + ":"+minutes + " - Felébredtél!");
+    $("textarea#storyboard").val(hours + ":"+minuteString + " - Felébredtél!");
     text = $("textarea#storyboard").val();
     $("#"+currentRoom).css("background-color","lightgreen");
     storyTeller();
@@ -47,31 +48,31 @@ function process()
     roomHandler();
     outOfCoffee();
 
-    if(taskCounter>0)
+    if(taskCounter > 0)
     {  
-        $("#snooze"). prop('disabled', true);
+        $("#snooze").prop('disabled', true);
     }
     
     
-    if(time<20)
+    if(time < 20)
     {
         
-        $("#dress-up"). prop('disabled', true);
+        $("#dress-up").prop('disabled', true);
         
     }
     
-    if(time<15)
+    if(time < 15)
     {
         
-        $("#snooze"). prop('disabled', true);
-        $("#shower"). prop('disabled', true);
+        $("#snooze").prop('disabled', true);
+        $("#shower").prop('disabled', true);
         
     }
-    if(time<5)
+    if(time < 5)
     {
         $("button").each(function(index)
         {
-            $(this). prop('disabled', true);
+            $(this).prop('disabled', true);
         });
 
         if(takeShower == 0)
@@ -85,11 +86,6 @@ function process()
         if(dressUp == 0)
         {
             $("#is-dressed").css("background-color","pink");
-        }
-        $("textarea#storyboard").val(hours + ":" + minutes + " - A rituálé kiteljesedet!\n" + $("textarea#storyboard").val());
-        
-        
-    }
-
-    
+        }   
+    } 
 }

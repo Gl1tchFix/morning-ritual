@@ -16,6 +16,7 @@ function outOfCoffee()
 
         $("#brew-coffee").show(500);
         $("#no-coffee").show(500);   
+        $(".room").prop('disabled', true);
                        
     }
 
@@ -23,6 +24,7 @@ function outOfCoffee()
 
 function brewCoffee(brew)
 {
+    $(".room").prop('disabled', false);
     if(brew == 1)
     {
         time-=7;
